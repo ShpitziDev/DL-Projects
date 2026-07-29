@@ -23,21 +23,36 @@ model performance using standard VQA metrics.
 
 ---
 
+### 🔹 VGGT Seminar — Visual Geometry from Multiple Views
+
+A controlled reproduction and evaluation of **VGGT: Visual Geometry Grounded Transformer**
+on calibrated real scenes from ETH3D and synthetic ground truth from TartanAir.
+
+**Highlights:**
+- Official VGGT-1B inference reproduced on an RTX 5080
+- Nested 2/4/6/8/10-view evaluation
+- Camera, depth, confidence, runtime, and memory analysis
+- Leakage-safe bounded camera/depth-head adaptation
+- Submission-ready 16-page report with verified equations and figures
+- 88 download-free tests
+
+**Start here:**
+- [`VGGT-Seminar/README.md`](VGGT-Seminar/README.md)
+- [`VGGT-Seminar/report/submission/Peleg_Shpitzer_Razi_Mreeh_VGGT_Seminar_Report.pdf`](VGGT-Seminar/report/submission/Peleg_Shpitzer_Razi_Mreeh_VGGT_Seminar_Report.pdf)
+
+Large datasets, model checkpoints, and generated experiment outputs remain excluded.
+
+---
+
 ## 🧠 Topics Covered
 - Deep Learning with PyTorch
 - Computer Vision
 - Multimodal Learning (Vision + Language)
 - Attention Mechanisms
+- Multi-view Geometry
+- Vision Transformers
+- Depth and Camera Estimation
 - Experimental Evaluation & Analysis
-
----
-
-## 🚀 Future Work
-Additional projects will be added over time, potentially covering:
-- Vision Transformers (ViT)
-- Advanced attention architectures
-- Representation learning
-- Other applied deep learning tasks
 
 ---
 
@@ -45,6 +60,7 @@ Additional projects will be added over time, potentially covering:
 - Python
 - PyTorch
 - Jupyter Notebook
+- CUDA
 
 ---
 

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "protocol_version": "eth3d-overlap-aware-nested-v1",
+  "checkpoint_sha256": "d15bf50a8615c8225ed48b51ea5cac673d82442ec0309036df555a053253afe0",
+  "source_commits": [
+    "5ef68d3",
+    "ccb5487"
+  ],
+  "sources": [
+    {
+      "path": "outputs/experiments/phase7_delivery_area_view_count/summary.csv",
+      "sha256": "c6117dbd60c9e702b3c3e8b9160e6200883bd04f2cae17ed3a80a2bd2034fd71"
+    },
+    {
+      "path": "outputs/experiments/phase7_delivery_area_view_count/summary.json",
+      "sha256": "3a4d61f3d4329279e2edb9c36eb5099f26c21e740344e250f1f8fcf9cc59f11b"
+    },
+    {
+      "path": "outputs/experiments/phase7_delivery_area_view_count/manifest.json",
+      "sha256": "8d1a48d0990f150bdcf2e06ea888b7f8007fe8cc4c52fabfec1f94c4f7a1e227"
+    },
+    {
+      "path": "outputs/experiments/phase8_courtyard_view_count/summary.csv",
+      "sha256": "42ac243827889b682234e3cc779f66874d4ad12bbb8dd436dbde83bef265ef3c"
+    },
+    {
+      "path": "outputs/experiments/phase8_courtyard_view_count/summary.json",
+      "sha256": "f6af1dc475e342d09d32d4457858becedd671d9eb9ab39eb8e418c985879e7cb"
+    },
+    {
+      "path": "outputs/experiments/phase8_courtyard_view_count/manifest.json",
+      "sha256": "5de52a090745d8b83f8e9ddf29c33e65fb0f2ad4ed4d57c1a2e268fa362505e0"
+    },
+    {
+      "path": "outputs/experiments/phase8_courtyard_view_count/comparisons/delivery_area_vs_courtyard.csv",
+      "sha256": "249038456f0c90f57865c5c8195a2b57376e0a95c7d90b7b1447b5d237cdd474"
+    },
+    {
+      "path": "outputs/experiments/phase8_courtyard_view_count/comparisons/delivery_area_vs_courtyard.json",
+      "sha256": "148ba5d254a7bfe1b8c4ae826314ba593be36389975e04053705f40cef7c989d"
+    }
+  ],
+  "generated_from_saved_outputs_only": true,
+  "builder": "scripts/build_phase9_report.py",
+  "git_head": "ccb54878da4a82855cb2f9aca8787266a9e34e21"
+}

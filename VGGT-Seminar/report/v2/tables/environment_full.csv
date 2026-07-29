@@ -1,0 +1,8 @@
+setting,value
+Official repository commit,a288dd0f14786c93483e45524328726ab7b1b4ce
+Checkpoint SHA-256,d15bf50a8615c8225ed48b51ea5cac673d82442ec0309036df555a053253afe0
+Python / PyTorch / CUDA,3.11.15 / 2.13.0+cu130 / 13.0
+GPU / precision,RTX 5080 / BF16 autocast
+Flash SDPA,Disabled
+Protocol,eth3d-overlap-aware-nested-v1
+Inference mode,Offline local checkpoint; one forward per condition

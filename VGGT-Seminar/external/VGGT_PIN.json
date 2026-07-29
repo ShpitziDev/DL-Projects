@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "repository_url": "https://github.com/facebookresearch/vggt.git",
+  "branch": "main",
+  "commit": "a288dd0f14786c93483e45524328726ab7b1b4ce",
+  "commit_date": "2026-05-18T20:39:35-07:00",
+  "subject": "readme",
+  "selection": "current-main",
+  "license": "VGGT License v1 (last updated 2025-07-29)",
+  "checkpoint_id": "facebook/VGGT-1B",
+  "checkout_path": "external/vggt"
+}

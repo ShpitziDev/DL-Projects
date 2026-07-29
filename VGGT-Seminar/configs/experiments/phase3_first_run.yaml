@@ -1,0 +1,17 @@
+seed: 42
+device: cuda
+precision: bfloat16
+checkpoint:
+  model_id: facebook/VGGT-1B
+  filename: model.pt
+  directory: local_assets/checkpoints
+input:
+  files:
+    - external/vggt/examples/single_cartoon/images/model_was_never_trained_on_single_image_or_cartoon.jpg
+  preprocessing_mode: crop
+tracking:
+  query: image_center
+output:
+  directory: outputs/predictions/phase3_first_run
+  run_name: phase3_first_run
+offline: true

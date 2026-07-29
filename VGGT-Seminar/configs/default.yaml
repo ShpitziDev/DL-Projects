@@ -1,0 +1,14 @@
+seed: 42
+device: auto
+precision: bfloat16
+checkpoint:
+  model_id: facebook/VGGT-1B
+  directory: checkpoints
+data:
+  directory: data
+preprocessing:
+  max_image_dimension: 518
+  patch_multiple: 14
+output:
+  directory: outputs
+  run_name: baseline

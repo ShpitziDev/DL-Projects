@@ -1,0 +1,22 @@
+{
+  "status": "not_executed_no_independent_environment_local",
+  "new_forward_passes": 0,
+  "candidate": {
+    "environment": "Office",
+    "difficulty": "easy",
+    "camera": "lcam_front",
+    "required_archives": [
+      {
+        "name": "Office/Data_easy/image_lcam_front.zip",
+        "size_gb": 2.764395089
+      },
+      {
+        "name": "Office/Data_easy/depth_lcam_front.zip",
+        "size_gb": 0.939556411
+      }
+    ],
+    "compressed_total_gb": 3.7039515,
+    "official_source": "https://huggingface.co/datasets/theairlabcmu/tartanair2",
+    "reason": "Distinct official TartanAir V2 environment with RGB, depth, and bundled poses."
+  }
+}

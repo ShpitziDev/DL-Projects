@@ -1,0 +1,4 @@
+# Not installed in Phase 2. Native-Windows compatibility must be assessed separately.
+pycolmap==3.10.0
+pyceres==2.3
+# LightGlue is an unpinned Git dependency in the official demo requirements.

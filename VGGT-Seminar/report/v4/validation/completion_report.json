@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "source_commit_before_work": "7e5369d0eaa3f67c144beb3f4dc38fb433211640",
+  "git_commit_created": false,
+  "working_tree_note": "Existing user and prior-project changes were preserved; no commit was requested.",
+  "artifacts": {
+    "markdown": {
+      "path": "report/v4/seminar_report_working.md",
+      "sha256": "151882C17F9861B09896AECF38CB0C85B8E68D837F0F3D6374DD173C08696FD4"
+    },
+    "docx": {
+      "path": "report/v4/seminar_report_working.docx",
+      "sha256": "919DB54F35A8E27D7C2ABD5625F32BF4C7A6E07FF20585BA26BE1A0AD7521F25"
+    },
+    "pdf": {
+      "path": "report/v4/seminar_report_working.pdf",
+      "sha256": "131A6E8E0A63AA8CA344B548AAECBCA2059F2D6C2DBB28E873E514A39365F98E"
+    }
+  },
+  "document": {
+    "word_count": 3304,
+    "main_narrative_pages": 12,
+    "back_matter_pages": 1,
+    "total_pdf_pages": 13,
+    "figures": 9
+  },
+  "execution": {
+    "new_vggt_forward_passes": 0,
+    "additional_adaptation_runs": 0,
+    "datasets_downloaded": 0,
+    "canonical_adaptation_changed": false
+  },
+  "validation": {
+    "saved_output_numerical_conditions": 10,
+    "report_contract_checks_passed": 6,
+    "pdf_pages_rendered_and_inspected": 13,
+    "forbidden_visible_labels_found": 0,
+    "blank_or_clipped_pages_observed": 0
+  },
+  "pending_author_input": "Confirmed contribution split for Peleg and Razi; this is the only content placeholder requiring author confirmation."
+}

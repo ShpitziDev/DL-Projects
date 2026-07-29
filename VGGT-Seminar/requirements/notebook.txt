@@ -1,0 +1,2 @@
+# Installed through Micromamba/conda-forge for the VS Code notebook kernel.
+ipykernel==7.3.0

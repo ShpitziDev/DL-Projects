@@ -1,0 +1,29 @@
+experiment_id: v3_tartanair_head_adaptation_20260729
+dataset_config: configs/datasets/tartanair_v3_pilot.yaml
+base_checkpoint: local_assets/checkpoints/model.pt
+split:
+  train: [P001, P002, P003, P004, P005]
+  validation: [P006]
+  test: [P000]
+sampling:
+  views_per_sample: 2
+  adjacent_stride: 1
+  start_min: 5
+  start_max: 100
+optimization:
+  trainable_modules: [camera_head, depth_head]
+  frozen_modules: [aggregator]
+  steps: 30
+  learning_rate: 0.00001
+  weight_decay: 0.01
+  camera_loss_weight: 1.0
+  depth_loss_weight: 1.0
+  confidence_regularizer: 0.05
+  gradient_clip_norm: 1.0
+  precision: bfloat16
+validation:
+  pairs: [[P006, 20], [P006, 35], [P006, 50], [P006, 65], [P006, 80]]
+execution:
+  authorized: true
+  device: cuda:0
+  output_root: outputs/experiments/v3_tartanair_finetune_20260729

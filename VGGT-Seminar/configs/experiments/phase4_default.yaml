@@ -1,0 +1,15 @@
+scene_name: controlled_object
+frame_counts: [2, 4, 6, 8]
+selected_frame_count: 4
+order_variants: [original]
+degradation:
+  mode: none
+  severity: 0.5
+preprocessing_mode: crop
+device: cuda
+precision: bfloat16
+enable_tracking: true
+export_results: true
+approve_inference: false
+run_name: phase4_controlled_object_preview
+seed: 42

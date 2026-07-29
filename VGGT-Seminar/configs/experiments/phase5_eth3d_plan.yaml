@@ -1,0 +1,15 @@
+phase: 5
+input_source: eth3d
+scene_name: delivery_area
+dataset_root: local_assets/datasets/eth3d
+frame_counts: [2, 4, 6, 8, 10]
+selection_strategies: [sequential, evenly_spaced]
+orders: [original, reversed, shuffled]
+shuffle_seed: 42
+build_full_plan: false
+selected_frame_count: 2
+selected_strategy: evenly_spaced
+selected_order: original
+approve_inference: false
+notes: Planning configuration only; no inference is authorized by this file.
+

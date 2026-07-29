@@ -1,0 +1,278 @@
+{
+  "source_commit_before_v4": "7e5369d0eaa3f67c144beb3f4dc38fb433211640",
+  "canonical_runs": {
+    "pretrained": "outputs/experiments/v3_tartanair_pretrained_20260729_sdpa_corrected",
+    "adapted": "outputs/experiments/v3_tartanair_adapted_step15_20260729",
+    "adaptation": "outputs/experiments/v3_tartanair_finetune_20260729"
+  },
+  "numerical_checks": [
+    {
+      "model": "pretrained",
+      "subset": "S2",
+      "abs_rel": true,
+      "rmse": true,
+      "delta1": true,
+      "confidence_rho": true,
+      "valid_mask": "finite prediction, prediction > 0, and GT 0.1-100 m",
+      "scale_scope": "one global median scale jointly across all valid frames in this condition"
+    },
+    {
+      "model": "pretrained",
+      "subset": "S4",
+      "abs_rel": true,
+      "rmse": true,
+      "delta1": true,
+      "confidence_rho": true,
+      "valid_mask": "finite prediction, prediction > 0, and GT 0.1-100 m",
+      "scale_scope": "one global median scale jointly across all valid frames in this condition"
+    },
+    {
+      "model": "pretrained",
+      "subset": "S6",
+      "abs_rel": true,
+      "rmse": true,
+      "delta1": true,
+      "confidence_rho": true,
+      "valid_mask": "finite prediction, prediction > 0, and GT 0.1-100 m",
+      "scale_scope": "one global median scale jointly across all valid frames in this condition"
+    },
+    {
+      "model": "pretrained",
+      "subset": "S8",
+      "abs_rel": true,
+      "rmse": true,
+      "delta1": true,
+      "confidence_rho": true,
+      "valid_mask": "finite prediction, prediction > 0, and GT 0.1-100 m",
+      "scale_scope": "one global median scale jointly across all valid frames in this condition"
+    },
+    {
+      "model": "pretrained",
+      "subset": "S10",
+      "abs_rel": true,
+      "rmse": true,
+      "delta1": true,
+      "confidence_rho": true,
+      "valid_mask": "finite prediction, prediction > 0, and GT 0.1-100 m",
+      "scale_scope": "one global median scale jointly across all valid frames in this condition"
+    },
+    {
+      "model": "adapted_step15",
+      "subset": "S2",
+      "abs_rel": true,
+      "rmse": true,
+      "delta1": true,
+      "confidence_rho": true,
+      "valid_mask": "finite prediction, prediction > 0, and GT 0.1-100 m",
+      "scale_scope": "one global median scale jointly across all valid frames in this condition"
+    },
+    {
+      "model": "adapted_step15",
+      "subset": "S4",
+      "abs_rel": true,
+      "rmse": true,
+      "delta1": true,
+      "confidence_rho": true,
+      "valid_mask": "finite prediction, prediction > 0, and GT 0.1-100 m",
+      "scale_scope": "one global median scale jointly across all valid frames in this condition"
+    },
+    {
+      "model": "adapted_step15",
+      "subset": "S6",
+      "abs_rel": true,
+      "rmse": true,
+      "delta1": true,
+      "confidence_rho": true,
+      "valid_mask": "finite prediction, prediction > 0, and GT 0.1-100 m",
+      "scale_scope": "one global median scale jointly across all valid frames in this condition"
+    },
+    {
+      "model": "adapted_step15",
+      "subset": "S8",
+      "abs_rel": true,
+      "rmse": true,
+      "delta1": true,
+      "confidence_rho": true,
+      "valid_mask": "finite prediction, prediction > 0, and GT 0.1-100 m",
+      "scale_scope": "one global median scale jointly across all valid frames in this condition"
+    },
+    {
+      "model": "adapted_step15",
+      "subset": "S10",
+      "abs_rel": true,
+      "rmse": true,
+      "delta1": true,
+      "confidence_rho": true,
+      "valid_mask": "finite prediction, prediction > 0, and GT 0.1-100 m",
+      "scale_scope": "one global median scale jointly across all valid frames in this condition"
+    }
+  ],
+  "metric_definitions_checked": {
+    "abs_rel": "mean(abs(scaled_prediction - ground_truth) / ground_truth)",
+    "delta1": "mean(max(pred/gt, gt/pred) < 1.25)",
+    "rmse_unit": "metres after condition-level median scaling",
+    "valid_depth_m": [
+      0.1,
+      100.0
+    ],
+    "similarity": "Umeyama least-squares Sim(3), independently per view-count condition",
+    "rotation": "first-camera orientation gauge; mean geodesic SO(3) angle in degrees",
+    "confidence": "Spearman rho between predicted confidence and per-pixel AbsRel"
+  },
+  "split_validation": {
+    "training": [
+      "P001",
+      "P002",
+      "P003",
+      "P004",
+      "P005"
+    ],
+    "validation": [
+      "P006"
+    ],
+    "test": [
+      "P000"
+    ],
+    "p000_never_training_or_selection": true,
+    "p006_alone_selected_step15": true,
+    "adapted_head_hash": "94446a016d3f3343e64b506a2fff4251fe81e43a21ce745cc837c6496a81a58d"
+  },
+  "adaptation": {
+    "parameters": {
+      "total_parameters": 1157941492,
+      "trainable_parameters": 248829172,
+      "frozen_parameters": 909112320
+    },
+    "config": {
+      "experiment_id": "v3_tartanair_head_adaptation_20260729",
+      "dataset_config": "configs/datasets/tartanair_v3_pilot.yaml",
+      "base_checkpoint": "local_assets/checkpoints/model.pt",
+      "split": {
+        "train": [
+          "P001",
+          "P002",
+          "P003",
+          "P004",
+          "P005"
+        ],
+        "validation": [
+          "P006"
+        ],
+        "test": [
+          "P000"
+        ]
+      },
+      "sampling": {
+        "views_per_sample": 2,
+        "adjacent_stride": 1,
+        "start_min": 5,
+        "start_max": 100
+      },
+      "optimization": {
+        "trainable_modules": [
+          "camera_head",
+          "depth_head"
+        ],
+        "frozen_modules": [
+          "aggregator"
+        ],
+        "steps": 30,
+        "learning_rate": 1e-05,
+        "weight_decay": 0.01,
+        "camera_loss_weight": 1.0,
+        "depth_loss_weight": 1.0,
+        "confidence_regularizer": 0.05,
+        "gradient_clip_norm": 1.0,
+        "precision": "bfloat16"
+      },
+      "validation": {
+        "pairs": [
+          [
+            "P006",
+            20
+          ],
+          [
+            "P006",
+            35
+          ],
+          [
+            "P006",
+            50
+          ],
+          [
+            "P006",
+            65
+          ],
+          [
+            "P006",
+            80
+          ]
+        ]
+      },
+      "execution": {
+        "authorized": true,
+        "device": "cuda:0",
+        "output_root": "outputs/experiments/v3_tartanair_finetune_20260729"
+      }
+    },
+    "memory_probe": {
+      "status": "passed",
+      "objective": 2.2083685398101807,
+      "peak_allocated_gib": 5.9468674659729,
+      "peak_reserved_gib": 6.5234375,
+      "optimizer_step_performed": false
+    },
+    "runtime": {
+      "status": "passed",
+      "elapsed_seconds": 25.846072399999684,
+      "best_validation_objective": 0.36119772493839264,
+      "python": "3.11.15",
+      "torch": "2.13.0+cu130",
+      "cuda": "13.0",
+      "gpu": "NVIDIA GeForce RTX 5080",
+      "split": {
+        "train": [
+          "P001",
+          "P002",
+          "P003",
+          "P004",
+          "P005"
+        ],
+        "validation": [
+          "P006"
+        ],
+        "test": [
+          "P000"
+        ]
+      }
+    },
+    "training_samples": 30,
+    "batch": "one sequence of two adjacent frames",
+    "gradient_accumulation": 1,
+    "validation_frequency_steps": 5,
+    "selected_step": 15,
+    "additional_adaptation_for_v4": false
+  },
+  "independent_environment": {
+    "status": "not_executed_no_independent_environment_local",
+    "new_forward_passes": 0,
+    "candidate": {
+      "environment": "Office",
+      "difficulty": "easy",
+      "camera": "lcam_front",
+      "required_archives": [
+        {
+          "name": "Office/Data_easy/image_lcam_front.zip",
+          "size_gb": 2.764395089
+        },
+        {
+          "name": "Office/Data_easy/depth_lcam_front.zip",
+          "size_gb": 0.939556411
+        }
+      ],
+      "compressed_total_gb": 3.7039515,
+      "official_source": "https://huggingface.co/datasets/theairlabcmu/tartanair2",
+      "reason": "Distinct official TartanAir V2 environment with RGB, depth, and bundled poses."
+    }
+  }
+}

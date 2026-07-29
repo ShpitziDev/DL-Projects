@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/castacks/tartanairpy.git",
+  "commit": "158a6844d782942110967325ca3082f50ab2bfc7",
+  "license": "MIT",
+  "purpose": "Dataset acquisition and reference decoding conventions only; not required for VGGT inference.",
+  "retrieved_utc_date": "2026-07-29"
+}

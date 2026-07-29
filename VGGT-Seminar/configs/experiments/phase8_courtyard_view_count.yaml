@@ -1,0 +1,25 @@
+phase: 8
+experiment_id: phase8_courtyard_view_count
+seed: 42
+scene: courtyard
+protocol:
+  config: configs/experiments/phase6_1_overlap_aware_frames.yaml
+  version: eth3d-overlap-aware-nested-v1
+  subsets: [S2, S4, S6, S8, S10]
+selection_strategy: overlap_aware_nested
+order: original
+preprocessing_mode: crop
+device: cuda:0
+precision: bfloat16
+flash_sdp_enabled: false
+checkpoint_manifest: local_assets/checkpoints/checkpoint_manifest.json
+s2_reuse: null
+run_root: outputs/predictions/phase8_eth3d_view_count/courtyard
+aggregate_root: outputs/experiments/phase8_courtyard_view_count
+comparison_aggregate: outputs/experiments/phase7_delivery_area_view_count
+constraints:
+  expected_new_forward_passes: 5
+  expected_total_configurations: 5
+  allow_fallback: false
+  approved_scene: courtyard
+  approved_subsets: [S2, S4, S6, S8, S10]

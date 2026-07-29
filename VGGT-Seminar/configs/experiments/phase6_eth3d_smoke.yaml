@@ -1,0 +1,23 @@
+phase: 6
+experiment_id: phase6_eth3d_smoke_delivery_area_2view
+seed: 42
+input:
+  source: eth3d
+  scene: delivery_area
+  frame_count: 2
+  selection_strategy: evenly_spaced
+  order: original
+  preprocessing_mode: crop
+model:
+  checkpoint_manifest: local_assets/checkpoints/checkpoint_manifest.json
+  device: cuda:0
+  precision: bfloat16
+  tracking_enabled: true
+  flash_sdp_enabled: false
+output:
+  directory: outputs/predictions/phase6_eth3d_smoke/delivery_area/2_views_evenly_spaced_original
+constraints:
+  expected_original_indices: [0, 43]
+  expected_filenames: [DSC_0675.JPG, DSC_0718.JPG]
+  expected_forward_passes: 1
+

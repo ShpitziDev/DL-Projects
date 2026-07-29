@@ -1,0 +1,91 @@
+{
+  "status": "complete",
+  "source_working_report": "report/v4/seminar_report_working.pdf",
+  "final_pdf": {
+    "path": "report/submission/Peleg_Shpitzer_Razi_Mreeh_VGGT_Seminar_Report.pdf",
+    "sha256": "4012BD09DC600372FCC94B614C188D4FC5FBB40B8C376F7AE50A46EABA1D07F8"
+  },
+  "final_docx": {
+    "path": "report/submission/Peleg_Shpitzer_Razi_Mreeh_VGGT_Seminar_Report.docx",
+    "sha256": "D425AC0CDFAE6CCBE5895001F7047FC87DED1FC6143AECF3239A366A8E518B75"
+  },
+  "final_markdown": {
+    "path": "report/submission/Peleg_Shpitzer_Razi_Mreeh_VGGT_Seminar_Report.md",
+    "sha256": "695F226A5DD382C072FB82DBE5E391668A55088FD629C8F421925A77AF1A5F81"
+  },
+  "document": {
+    "page_count": 16,
+    "word_count": 2644,
+    "figure_count": 11,
+    "equation_graphic_count": 10,
+    "table_count": 3,
+    "two_enlarged_eth3d_evidence_pages": true,
+    "eth3d_pages": {
+      "delivery_area": 9,
+      "courtyard": 10
+    }
+  },
+  "mathematical_rendering": {
+    "status": "passed",
+    "raw_latex_tokens_found_in_pdf": 0,
+    "camera_mapping_rendered": true,
+    "camera_center_rendered": true,
+    "similarity_alignment_rendered": true,
+    "rotation_error_rendered": true,
+    "depth_scale_rendered": true,
+    "absrel_rendered": true,
+    "rmse_rendered": true,
+    "delta_1_25_rendered": true,
+    "spearman_rendered": true
+  },
+  "editorial_validation": {
+    "placeholders_removed": true,
+    "institution_course_instructor_removed": true,
+    "author_contribution_content_removed": true,
+    "development_labels_removed": true,
+    "only_visible_authors": [
+      "Peleg Shpitzer",
+      "Razi Mreeh"
+    ]
+  },
+  "numerical_integrity": {
+    "status": "passed",
+    "canonical_values_changed": false,
+    "p000_held_out_boundary_preserved": true,
+    "p006_selection_boundary_preserved": true,
+    "selected_step": 15,
+    "selected_head_sha256": "94446a016d3f3343e64b506a2fff4251fe81e43a21ce745cc837c6496a81a58d"
+  },
+  "references": {
+    "status": "passed",
+    "separate_numbered_entries": 9,
+    "selectable_urls": true
+  },
+  "visual_inspection": {
+    "status": "passed",
+    "pages_rendered": 16,
+    "render_scale": 2.0,
+    "contact_sheet": "report/submission/validation/final_page_contact_sheet.png",
+    "clipped_tables": 0,
+    "orphan_headings": 0,
+    "blank_pages": 0,
+    "raw_markup_observed": false
+  },
+  "tests": {
+    "command": "python tests/test_submission_report.py",
+    "passed": 6,
+    "failed": 0
+  },
+  "git": {
+    "artifact_commit": "31ff30c",
+    "artifact_commit_message": "Add submission-ready VGGT seminar report",
+    "status": "submission artifacts committed; unrelated pre-existing and prior-project workspace changes remain unstaged"
+  },
+  "execution_confirmation": {
+    "new_vggt_forward_passes": 0,
+    "new_training_runs": 0,
+    "new_dataset_downloads": 0,
+    "canonical_results_changed": false
+  },
+  "remaining_issues": []
+}

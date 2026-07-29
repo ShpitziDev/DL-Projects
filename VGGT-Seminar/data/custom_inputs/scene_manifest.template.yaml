@@ -1,0 +1,18 @@
+scene_id: replace_me
+title: "Replace with a concise scene title"
+category: controlled_object
+description: "What the scene contains and why it was selected."
+source: user_capture
+capture_device: "Device and lens/mode, without personal identifiers"
+scene_behavior: static  # static or dynamic
+ordered_images:
+  - 001.jpg
+  - 002.jpg
+reference_image: 001.jpg
+known_challenges:
+  - none
+notes: "Capture path, lighting, overlap, or intentional changes."
+ground_truth:
+  available: false
+  description: null
+redistribution_permission: private_coursework_only

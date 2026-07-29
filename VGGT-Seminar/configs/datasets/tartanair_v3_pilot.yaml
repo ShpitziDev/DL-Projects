@@ -1,0 +1,77 @@
+dataset:
+  name: TartanAir V2
+  source: https://huggingface.co/datasets/theairlabcmu/tartanair2
+  license: CC-BY-4.0
+  local_root: local_assets/datasets/tartanair_v2
+  environment: ArchVizTinyHouseDay
+  difficulty: easy
+  trajectory: P000
+  camera: lcam_front
+  modalities:
+    - image
+    - depth
+    - pose
+
+acquisition:
+  archive_scope_note: Archives contain P000-P006; the V3 pilot uses P000 only.
+  archives:
+    - path: ArchVizTinyHouseDay/Data_easy/image_lcam_front.zip
+      bytes: 517844269
+      sha256: 9bea5fca9d0cf50105c7d34583d4d5db06e3715ef708262b4dfad763d34b17da
+    - path: ArchVizTinyHouseDay/Data_easy/depth_lcam_front.zip
+      bytes: 186046186
+      sha256: 83e6e680297af35aa83d594ea3ed254bf71e9d9da7b26fee6d0ccb29f25ac104
+
+verified_local_contract:
+  frame_count: 116
+  frame_ids: [0, 115]
+  image:
+    shape_hwc: [640, 640, 3]
+    storage_dtype: uint8
+    color_note: PNG is decoded by OpenCV as BGR; convert to RGB for VGGT.
+  depth:
+    shape_hwc_encoded: [640, 640, 4]
+    storage_dtype: uint8
+    decode: reinterpret RGBA bytes as little-endian float32 and squeeze channel
+  pose:
+    shape: [116, 7]
+    columns: [x, y, z, qx, qy, qz, qw]
+
+camera:
+  model: pinhole
+  image_size_wh: [640, 640]
+  intrinsics:
+    fx: 320.0
+    fy: 320.0
+    cx: 319.5
+    cy: 319.5
+  status: code-verified from pinned official toolkit; validate by reprojection before scoring
+
+pilot:
+  selection_status: not_frozen
+  candidate_view_counts: [2, 4, 6, 8, 10]
+  ordering: original
+  selection_rule: freeze one high-overlap nested window using GT pose plus image-overlap audit before inference
+  inference_authorized: false
+  output_root: outputs/experiments/v3_tartanair
+
+finetuning_candidate:
+  status: planned_not_authorized
+  test_trajectory:
+    - P000
+  candidate_train_trajectories:
+    - P001
+    - P002
+    - P003
+    - P004
+    - P005
+  candidate_validation_trajectories:
+    - P006
+  split_rule: P000 remains untouched by training and model-selection decisions
+  initial_scope: frozen aggregator with camera and depth heads only
+  tracking_head: excluded
+  approval_required:
+    - training-code audit
+    - one-batch memory probe
+    - step and time budget
+    - actual fine-tuning run

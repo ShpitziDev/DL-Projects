@@ -1,0 +1,42 @@
+phase: "6.1"
+protocol_version: eth3d-overlap-aware-nested-v1
+purpose: Frozen, calibration-and-feature-derived ETH3D frame subsets; this file does not authorize inference.
+dataset_root: local_assets/datasets/eth3d
+frame_counts: [2, 4, 6, 8, 10]
+selection_strategy: overlap_aware_nested
+selected_method: D_hybrid_pose_feature
+analysis:
+  max_image_dimension: 960
+  orb_nfeatures: 2500
+  max_pair_gap: 12
+  lowe_ratio: 0.75
+  fundamental_ransac_threshold_px: 1.5
+  fundamental_ransac_confidence: 0.999
+  anchor_min_index_gap: 2
+  min_fundamental_inliers: 20
+  min_normalized_matches: 0.015
+  tie_break: lowest original indices
+scenes:
+  delivery_area:
+    image_count: 44
+    selected_window: {start: 0, stop: 10, mean_neighbor_distance: 0.7251463914, mean_neighbor_angle_deg: 3.6057576056, mean_neighbor_matches: 708.3333333333, mean_neighbor_inliers: 530.8888888889}
+    subsets:
+      S2:  {indices: [0, 6], filenames: [DSC_0675.JPG, DSC_0681.JPG], stats: {mean_spacing: 4.1184, mean_angle_deg: 4.2463, mean_matches: 176.0, min_matches: 176, mean_inliers: 73.0, min_inliers: 73}}
+      S4:  {indices: [0, 3, 6, 9], filenames: [DSC_0675.JPG, DSC_0678.JPG, DSC_0681.JPG, DSC_0684.JPG], stats: {mean_spacing: 2.1743, mean_angle_deg: 4.8925, mean_matches: 291.7, min_matches: 66, mean_inliers: 159.0, min_inliers: 32}}
+      S6:  {indices: [0, 3, 4, 5, 6, 9], filenames: [DSC_0675.JPG, DSC_0678.JPG, DSC_0679.JPG, DSC_0680.JPG, DSC_0681.JPG, DSC_0684.JPG], stats: {mean_spacing: 1.3046, mean_angle_deg: 4.2149, mean_matches: 637.8, min_matches: 66, mean_inliers: 456.6, min_inliers: 32}}
+      S8:  {indices: [0, 1, 2, 3, 4, 5, 6, 9], filenames: [DSC_0675.JPG, DSC_0676.JPG, DSC_0677.JPG, DSC_0678.JPG, DSC_0679.JPG, DSC_0680.JPG, DSC_0681.JPG, DSC_0684.JPG], stats: {mean_spacing: 0.9320, mean_angle_deg: 3.0111, mean_matches: 752.3, min_matches: 66, mean_inliers: 555.0, min_inliers: 32}}
+      S10: {indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], filenames: [DSC_0675.JPG, DSC_0676.JPG, DSC_0677.JPG, DSC_0678.JPG, DSC_0679.JPG, DSC_0680.JPG, DSC_0681.JPG, DSC_0682.JPG, DSC_0683.JPG, DSC_0684.JPG], stats: {mean_spacing: 0.7251, mean_angle_deg: 3.6058, mean_matches: 708.3, min_matches: 200, mean_inliers: 530.9, min_inliers: 131}}
+  courtyard:
+    image_count: 38
+    selected_window: {start: 0, stop: 10, mean_neighbor_distance: 0.6364030024, mean_neighbor_angle_deg: 2.8217583856, mean_neighbor_matches: 536.7777777778, mean_neighbor_inliers: 431.5555555556}
+    subsets:
+      S2:  {indices: [0, 9], filenames: [DSC_0286.JPG, DSC_0295.JPG], stats: {mean_spacing: 5.7183, mean_angle_deg: 4.3236, mean_matches: 134.0, min_matches: 134, mean_inliers: 81.0, min_inliers: 81}}
+      S4:  {indices: [0, 4, 6, 9], filenames: [DSC_0286.JPG, DSC_0290.JPG, DSC_0292.JPG, DSC_0295.JPG], stats: {mean_spacing: 1.9082, mean_angle_deg: 6.9371, mean_matches: 236.7, min_matches: 194, mean_inliers: 180.3, min_inliers: 131}}
+      S6:  {indices: [0, 2, 3, 4, 6, 9], filenames: [DSC_0286.JPG, DSC_0288.JPG, DSC_0289.JPG, DSC_0290.JPG, DSC_0292.JPG, DSC_0295.JPG], stats: {mean_spacing: 1.1452, mean_angle_deg: 4.3295, mean_matches: 383.6, min_matches: 194, mean_inliers: 311.8, min_inliers: 131}}
+      S8:  {indices: [0, 2, 3, 4, 5, 6, 7, 9], filenames: [DSC_0286.JPG, DSC_0288.JPG, DSC_0289.JPG, DSC_0290.JPG, DSC_0291.JPG, DSC_0292.JPG, DSC_0293.JPG, DSC_0295.JPG], stats: {mean_spacing: 0.8181, mean_angle_deg: 3.1076, mean_matches: 475.0, min_matches: 262, mean_inliers: 387.1, min_inliers: 207}}
+      S10: {indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], filenames: [DSC_0286.JPG, DSC_0287.JPG, DSC_0288.JPG, DSC_0289.JPG, DSC_0290.JPG, DSC_0291.JPG, DSC_0292.JPG, DSC_0293.JPG, DSC_0294.JPG, DSC_0295.JPG], stats: {mean_spacing: 0.6364, mean_angle_deg: 2.8218, mean_matches: 536.8, min_matches: 338, mean_inliers: 431.6, min_inliers: 259}}
+constraints:
+  nested: true
+  preserve_original_order: true
+  allow_fallback: false
+  approve_inference: false

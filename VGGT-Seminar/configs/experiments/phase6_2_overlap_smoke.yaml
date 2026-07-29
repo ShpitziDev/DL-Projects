@@ -1,0 +1,38 @@
+phase: "6.2"
+experiment_id: phase6_2_eth3d_overlap_smoke_delivery_area_S2
+seed: 42
+input:
+  source: eth3d
+  scene: delivery_area
+  frame_count: 2
+  selection_strategy: overlap_aware_nested
+  order: original
+  preprocessing_mode: crop
+protocol:
+  config: configs/experiments/phase6_1_overlap_aware_frames.yaml
+  version: eth3d-overlap-aware-nested-v1
+  subset: S2
+  strict_superset: S4
+  overlap_statistics:
+    camera_center_spacing: 4.118422620143511
+    viewing_direction_angle_deg: 4.246264692462825
+    relative_rotation_deg: 4.298378462746634
+    ratio_matches: 176
+    normalized_orb_matches: 0.07245780156442981
+    fundamental_ransac_inliers: 73
+    inlier_ratio: 0.4147727272727273
+model:
+  checkpoint_manifest: local_assets/checkpoints/checkpoint_manifest.json
+  device: cuda:0
+  precision: bfloat16
+  tracking_enabled: true
+  flash_sdp_enabled: false
+output:
+  directory: outputs/predictions/phase6_2_eth3d_overlap_smoke/delivery_area/S2_overlap_aware_nested_original
+comparison:
+  phase6_directory: outputs/predictions/phase6_eth3d_smoke/delivery_area/2_views_evenly_spaced_original
+constraints:
+  expected_original_indices: [0, 6]
+  expected_filenames: [DSC_0675.JPG, DSC_0681.JPG]
+  expected_forward_passes: 1
+  allow_selection_fallback: false
