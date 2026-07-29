@@ -1,0 +1,31 @@
+{
+  "source_files_used": [
+    "D:\\cv_sem\\report\\submission\\Peleg_Shpitzer_Razi_Mreeh_VGGT_Seminar_Report.pdf",
+    "D:\\cv_sem\\report\\submission\\Peleg_Shpitzer_Razi_Mreeh_VGGT_Seminar_Report.docx",
+    "D:\\cv_sem\\report\\submission\\Peleg_Shpitzer_Razi_Mreeh_VGGT_Seminar_Report.md"
+  ],
+  "final_pdf_path": "D:\\cv_sem\\report\\final_submission\\Peleg_Shpitzer_Razi_Mreeh_Final_Report.pdf",
+  "final_docx_path": "D:\\cv_sem\\report\\final_submission\\Peleg_Shpitzer_Razi_Mreeh_Final_Report.docx",
+  "final_markdown_path": "D:\\cv_sem\\report\\final_submission\\Peleg_Shpitzer_Razi_Mreeh_Final_Report.md",
+  "final_page_count": 17,
+  "final_word_count": 3263,
+  "figure_count": 12,
+  "table_count": 3,
+  "english_only": true,
+  "course_title_correct": true,
+  "all_vggt_seminar_report_instances_removed": true,
+  "numerical_integrity_confirmed": true,
+  "figure_table_integrity_confirmed": true,
+  "visual_inspection_confirmed": true,
+  "selectable_pdf_links_detected": 2,
+  "zero_inference": true,
+  "zero_training": true,
+  "zero_downloads": true,
+  "remaining_issues": "none",
+  "validation_notes": [
+    "All 17 rendered pages were inspected in the final contact sheet.",
+    "The first page intentionally omits the running header.",
+    "Every content page contains the approved English running header.",
+    "Scientific content after the title-page boundary is byte-identical after excluding the added missing Table 2 caption."
+  ]
+}
